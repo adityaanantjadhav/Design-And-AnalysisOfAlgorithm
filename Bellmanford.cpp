@@ -46,30 +46,36 @@ int main(){
 	
 	
 	int start,end;
-	for(int j=0;j<v;j++){
-	int flag=0;
-		for(int i=0;i<e;i++){
-			start=mat[0][i];
-			end=mat[1][i];
-			if(dist[start]!=999){
-				if(dist[end]>(dist[start]+mat[2][i])){
-					dist[end]=dist[start]+mat[2][i];
-					flag=1;
+	for (int j = 0; j < v; j++)
+	{
+		int flag = 0;
+		for (int i = 0; i < e; i++)
+		{
+			start = mat[0][i];
+			end = mat[1][i];
+			if (dist[start] != 999)
+			{
+				if (dist[end] > (dist[start] + mat[2][i]))
+				{
+					dist[end] = dist[start] + mat[2][i];
+					flag = 1;
 				}
 			}
 		}
-		if(flag==0 && j!=(v-1)){
+		if (flag == 0 && j != (v - 1))
+		{
 			break;
 		}
-		else if(flag==1 && j==(v-1)){
-			cout<<"there exists a negative loop\n";	
+		else if (flag == 1 && j == (v - 1))
+		{
+			cout << "there exists a negative loop\n";
 		}
 
-        cout<<"iteration "<<j+1<<": ";
-		for(int i=0;i<v;i++){
-			cout<<dist[i]<<"\t";
-		}cout<<endl;
-		
+		cout << "iteration " << j + 1 << ": ";
+		for (int i = 0; i < v; i++)
+		{
+			cout << dist[i] << "\t";
+		}
+		cout << endl;
 	}
-	
 }
