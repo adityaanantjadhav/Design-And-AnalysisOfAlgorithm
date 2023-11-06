@@ -83,10 +83,12 @@ int main()
         }
     }
 
+    cout<<"enter the matrix values::\n";
     for (int m = 0; m < v; m++)
     {
         for (int n = 0; n < v; n++)
         {
+            cout<<"row"<<m<<"column"<<n<<"::";
             cin >> mat[m][n];
         }
     }
