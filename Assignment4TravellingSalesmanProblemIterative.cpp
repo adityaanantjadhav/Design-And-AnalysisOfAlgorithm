@@ -99,10 +99,8 @@ int main()
     int arr[50][50];
     int arr2[50][50];
 
-    cout << "enter the matrix :\n";
     for (int m = 0; m < v; m++)
     {
-        cout << "enter " << m + 1 << "th row:\n";
         for (int n = 0; n < v; n++)
         {
             arr[m][n] = 9999;
